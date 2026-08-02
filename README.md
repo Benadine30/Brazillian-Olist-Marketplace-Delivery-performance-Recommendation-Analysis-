@@ -33,6 +33,11 @@ Built as a star schema for Power BI: a fact table at order-item grain (OrderItem
 - Cross-check cancellations against the late delivery states. If cancellations cluster in the same high-late-rate states, customers are likely cancelling because they expect delays, which makes this a downstream effect of the same delivery problem. 
 - Loosen the promised delivery window slightly. With deliveries taking 12days on average, a small adjustment to the estimated delivery date would reduce how many orders count as "late"
 
+**DASHBOARD**
+
+<img width="1650" height="1275" alt="Olist_Ecomerce_report_page-0001" src="https://github.com/user-attachments/assets/d5c0ab7f-f7e0-4350-be72-9cb80bb21b89" />
+
+
 
 
 
