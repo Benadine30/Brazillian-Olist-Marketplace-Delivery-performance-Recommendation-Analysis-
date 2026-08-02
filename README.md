@@ -20,8 +20,18 @@ Brazilian E-Commerce Public Dataset by Olist approximately 100,000 orders placed
 ●	States and routes with fewer than 150–200 orders were excluded from headline comparisons to avoid small-sample noise driving the ranking.
 
 **Data Model**
+
 Built as a star schema for Power BI: a fact table at order-item grain (OrderItems) connected to Customer, Seller, Product, Geolocation, and a standard Date table. Geolocation is pre-aggregated from 1M+ raw zip-code pings down to one centroid per zip prefix (or per state, for this project's grain) before loading, to avoid an oversized, many-to-many relationship. 
 <img width="1716" height="1302" alt="Screenshot 2026-08-02 162702" src="https://github.com/user-attachments/assets/83ec2551-3f99-4c0b-a936-fc251b2241ee" />
+
+
+**RECOMMENDATIONS:**
+
+- Fix Rio de Janeiro first. It has a lot of orders and a high late rate, so improving it fixes more late deliveries than any other single state.
+- Treat the far Northeast routes (São Paulo to Alagoas, Maranhão,.) as a slower, separate project. They have the worst late rates, but too few orders to matter as much as Rio de Janeiro right now.
+- Audit carrier performance for February-March 2018. The sharp spike that month points to a specific, fixable cause, likely a carrier or capacity issue, rather than a spread out problem across the year. 
+- Cross-check cancellations against the late delivery states. If cancellations cluster in the same high-late-rate states, customers are likely cancelling because they expect delays, which makes this a downstream effect of the same delivery problem. 
+- Loosen the promised delivery window slightly. With deliveries taking 12days on average, a small adjustment to the estimated delivery date would reduce how many orders count as "late"
 
 
 
