@@ -37,6 +37,10 @@ Built as a star schema for Power BI: a fact table at order-item grain (OrderItem
 
 <img width="1650" height="1275" alt="Olist_Ecomerce_report_page-0001" src="https://github.com/user-attachments/assets/d5c0ab7f-f7e0-4350-be72-9cb80bb21b89" />
 
+**Link to interact with the report:**
+
+https://app.powerbi.com/view?r=eyJrIjoiMDEyNmYzNzQtM2UxZC00Y2FkLWE1NjQtMjc5ZGZmMGIzNmYwIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9
+
 
 
 
