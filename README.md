@@ -1,5 +1,5 @@
 # Brazillian-Olist-Marketplace-Delivery-performance-Recommendation-Analysis-
-A business-recommendation-focused analysis of 96,478 delivered orders from Olist, a Brazilian e-commerce marketplace, built to answer one decision: where should the business fix delivery reliability first, and why?
+This is a business-recommendation-focused analysis of 96,478 delivered orders from Olist, a Brazilian e-commerce marketplace, built to answer one decision: where should the business fix delivery reliability first, and why?
 
 **Business Context**
 
@@ -14,11 +14,16 @@ Brazilian E-Commerce Public Dataset by Olist approximately 100,000 orders placed
 **Scope & Filtering**
 
 ●	Analysis restricted to orders with status = “delivered” (96,478 of 99,441 total orders) so that delivery-time and lateness metrics are measured on completed journeys only.
+
 ●	“Late” is defined as order_delivered_customer_date later than order_estimated_delivery_date, the delivery promise shown to the customer at checkout, not an internal SLA target.
+
 ●	States and routes with fewer than 150–200 orders were excluded from headline comparisons to avoid small-sample noise driving the ranking.
 
 **Data Model**
 Built as a star schema for Power BI: a fact table at order-item grain (OrderItems) connected to Customer, Seller, Product, Geolocation, and a standard Date table. Geolocation is pre-aggregated from 1M+ raw zip-code pings down to one centroid per zip prefix (or per state, for this project's grain) before loading, to avoid an oversized, many-to-many relationship. 
+<img width="1716" height="1302" alt="Screenshot 2026-08-02 162702" src="https://github.com/user-attachments/assets/83ec2551-3f99-4c0b-a936-fc251b2241ee" />
+
+
 
 
 
